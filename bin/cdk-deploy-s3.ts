@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { S3DeployStack } from '../lib/s3-deploy-stack';
+import { CdkDeployS3Stack } from '../lib/cdk-deploy-s3-stack';
 
 const app = new cdk.App();
-new S3DeployStack(app, 'S3DeployStack', {
+new CdkDeployS3Stack(app, 'CdkDeployS3Stack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

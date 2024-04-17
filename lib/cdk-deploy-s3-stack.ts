@@ -2,7 +2,7 @@ import { Stack, StackProps, RemovalPolicy } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Bucket, BlockPublicAccess } from 'aws-cdk-lib/aws-s3';
 
-export class S3DeployStack extends Stack {
+export class CdkDeployS3Stack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
@@ -10,7 +10,7 @@ export class S3DeployStack extends Stack {
       this,
       "S3Bucket",
       {
-        bucketName: "cloudmancer-bucket-3453425",
+        bucketName: "your-bucket-name-12345",
         versioned: true,
         blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
         removalPolicy: RemovalPolicy.DESTROY

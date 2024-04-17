@@ -1,8 +1,8 @@
 {
-  "name": "s3-deploy",
+  "name": "cdk-deploy-s3",
   "version": "0.1.0",
   "bin": {
-    "s3-deploy": "bin/s3-deploy.js"
+    "cdk-deploy-s3": "bin/cdk-deploy-s3.js"
   },
   "scripts": {
     "build": "tsc",
