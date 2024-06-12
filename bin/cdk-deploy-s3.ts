@@ -4,7 +4,9 @@ import * as cdk from 'aws-cdk-lib';
 import { CdkDeployS3Stack } from '../lib/cdk-deploy-s3-stack';
 
 const app = new cdk.App();
-new CdkDeployS3Stack(app, 'CdkDeployS3Stack', {
+const stackEnv = app.node.tryGetContext("env");
+const envObject = app.node.tryGetContext(stackEnv);
+new CdkDeployS3Stack(app, `CdkDeployS3Stack-${envObject.env}`, {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
